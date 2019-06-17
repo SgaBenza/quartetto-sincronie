@@ -5,7 +5,7 @@ import { SoundPressure } from './SoundPressure'
 
 export function Chart() {
   return (
-    <svg>
+    <svg viewBox={`0 0 ${HEIGHT} ${WIDTH}`} height={HEIGHT} width={WIDTH}>
       <SoundPressure />
     </svg>
   )
