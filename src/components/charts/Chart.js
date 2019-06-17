@@ -1,7 +1,7 @@
 import React from 'react'
 import { HEIGHT, WIDTH } from '../../constants/chartConstants'
 
-import { SoundPressure } from './SoundPressure'
+import { SoundPressure } from './pressure/SoundPressure'
 
 export function Chart() {
   return (

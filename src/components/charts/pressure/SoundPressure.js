@@ -1,6 +1,8 @@
 import React from 'react'
 import { range } from 'lodash'
 
+import { Amplitude } from '../pressure/Amplitude'
+
 import {
   CX,
   CY,
@@ -8,7 +10,7 @@ import {
   PRESSURE_RADIUS,
   PRESSURE_OFFSET,
   SECONDS,
-} from '../../constants/chartConstants'
+} from '../../../constants/chartConstants'
 
 export function SoundPressure() {
   return (
@@ -27,6 +29,7 @@ export function SoundPressure() {
             PRESSURE_OFFSET} ${CX} ${CY}) translate(0 -${PRESSURE_INNER_RADIUS})`}
         />
       ))}
+      <Amplitude />
     </>
   )
 }
