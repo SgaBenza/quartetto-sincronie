@@ -6,6 +6,7 @@ import {
   CY,
   PRESSURE_INNER_RADIUS,
   PRESSURE_RADIUS,
+  PRESSURE_OFFSET,
   SECONDS,
 } from '../../constants/chartConstants'
 
@@ -20,8 +21,10 @@ export function SoundPressure() {
           y1={CY}
           x2={CX}
           y2={CY - PRESSURE_RADIUS}
-          stroke="green"
-          transform={`rotate(${(360 / SECONDS) * (d + 1)} ${CX} ${CY}) translate(0 -70)`}
+          stroke="gray"
+          strokeDasharray="1 3"
+          transform={`rotate(${((360 - PRESSURE_OFFSET * 2) / SECONDS) * (d + 1) +
+            PRESSURE_OFFSET} ${CX} ${CY}) translate(0 -${PRESSURE_INNER_RADIUS})`}
         />
       ))}
     </>
