@@ -1,7 +1,7 @@
 import React from 'react'
 import { range } from 'lodash'
 
-import { Amplitude } from '../pressure/Amplitude'
+import { AmplitudeMorpheme } from './AmplitudeMorpheme'
 
 import {
   CX,
@@ -29,7 +29,7 @@ export function SoundPressure() {
             PRESSURE_OFFSET} ${CX} ${CY}) translate(0 -${PRESSURE_INNER_RADIUS})`}
         />
       ))}
-      <Amplitude />
+      <AmplitudeMorpheme />
     </>
   )
 }
